@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2012 The Chromium Authors
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file.
+-->
+
+<!-- DO NOT ADD STRINGS HERE.
+
+    Android ui strings now live in
+    ui/android/java/strings/android_ui_strings.grd
+
+    See http://www.chromium.org/developers/design-documents/ui-localization
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<string name="low_memory_error">"Unable to complete previous operation due to low memory"</string>
+<string name="opening_file_error">"Failed to open selected file"</string>
+<string name="opening_android_media_picker">"Unable to open the photo picker"</string>
+<string name="permission_denied_error">"Unable to select media due to denied permissions"</string>
+<string name="elided_url_text_view_url_truncated">"URL truncated"</string>
+<string name="elided_url_text_view_url_expanded">"URL expanded"</string>
+<string name="copy_to_clipboard_failure_message">"Failed to copy to the clipboard"</string>
+<string name="link_copied">"Link copied"</string>
+<string name="image_copied">"Image copied"</string>
+<string name="copied">"Copied"</string>
+<string name="accessibility_toolbar_btn_menu">"Customise and control Google Chrome"</string>
+<string name="accessibility_list_menu_button">"%1$s Options"</string>
+</resources>

@@ -1,0 +1,54 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.github.webkitdemo'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.github.webkitdemo"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    aaptOptions {
+        noCompress "bin", "pak"
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'InvalidSetHasFixedSize'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation files("/home/dx/dev/chromium/src/out/arm64/android_crwebview_webkit.WebView-v2.0.0.aar")
+//    implementation files("/home/dx/AndroidStudioProjects/WebViewdemo/embedder_support_resources/build/outputs/aar/embedder_support_resources-debug.aar")
+//    implementation files("/home/dx/AndroidStudioProjects/WebViewdemo/content/build/outputs/aar/content-debug.aar")
+//    implementation files("/home/dx/AndroidStudioProjects/WebViewdemo/android_webview_resources/build/outputs/aar/android_webview_resources-debug.aar")
+//    implementation files("/home/dx/AndroidStudioProjects/WebViewdemo/ui/build/outputs/aar/ui-debug.aar")
+
+    implementation project(":android_webview_resources")
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

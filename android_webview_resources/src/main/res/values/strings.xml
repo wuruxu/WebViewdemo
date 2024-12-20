@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<string name="private_browsing_warning">"This functionality is not supported in this version of Android."</string>
+<string name="license_activity_title">"System WebView licences"</string>
+<string name="actionbar_manage_apps">"Manage apps"</string>
+<string name="context_menu_copy_link_address">"Copy link address"</string>
+<string name="context_menu_copy_link_text">"Copy link text"</string>
+<string name="context_menu_open_in_browser">"Open in browser"</string>
+</resources>
